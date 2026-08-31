@@ -1,213 +1,388 @@
-TrendPulse 📊
+# 📊 TrendPulse — Hacker News Trend Analysis
 
-From raw stories to meaningful insights --- TrendPulse collects,
-categorizes, analyzes, and visualizes what's trending on Hacker
-News.
+<div align="center">
 
-📌 About the Project
+**Turn trending stories into structured data, statistics, and visual insights.**
 
-TrendPulse is a Python-based data pipeline built to collect trending
-stories from the Hacker News API and turn the raw data into useful
-insights.
+A four-stage Python data pipeline built around the Hacker News API.
 
-The project follows a simple four-step workflow:
+**Collect → Process → Analyze → Visualize**
 
-Fetch → Clean → Analyze → Visualize
+</div>
 
-It collects stories, assigns them to categories using keywords, removes
-unnecessary or invalid data, performs statistical analysis, and
-generates visual charts.
+---
 
-🚀 Project Workflow
+## 📌 Overview
 
+**TrendPulse** is a Python-based data pipeline that collects trending stories from **Hacker News**, categorizes them using keyword matching, cleans the collected data, performs statistical analysis, and creates visualizations.
+
+The project is designed as a complete end-to-end data workflow:
+
+```text
 Hacker News API
-      ↓
-Task 1 — Data Collection
-      ↓
-JSON Data
-      ↓
-Task 2 — Data Processing
-      ↓
-Clean CSV
-      ↓
-Task 3 — Data Analysis
-      ↓
-Analysed CSV
-      ↓
-Task 4 — Visualization
-      ↓
-Charts / Insights
+       │
+       ▼
+┌──────────────────────┐
+│  1. Data Collection  │
+│      JSON Output     │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│  2. Data Processing  │
+│      Clean CSV       │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│    3. Data Analysis  │
+│   Statistics & Data  │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│  4. Visualization    │
+│     Charts & Trends  │
+└──────────────────────┘
+```
 
-🛠️ Tasks
+---
 
-Task 1 --- Data Collection
+## 🎯 Project Objective
 
-File: task1_data_collection.py
+The goal of TrendPulse is to demonstrate how raw data from a public API can be transformed into useful information through a simple and understandable data pipeline.
 
-Fetches trending stories from the Hacker News API.
+The project covers:
 
-Checks story titles against predefined keywords.
+- 🌐 API data collection
+- 🗂️ Keyword-based categorization
+- 🧹 Data cleaning
+- 📄 JSON and CSV file handling
+- 📈 Statistical analysis
+- 📊 Data visualization
+- 🔄 Multi-stage data processing
 
-Groups stories into five categories:
+---
 
-Technology
+## 🧩 Project Tasks
 
-World News
+### 1️⃣ Task 1 — Data Collection
 
-Sports
+**File:** `task1_data_collection.py`
 
-Science
+The first stage collects trending stories from the Hacker News API.
 
-Entertainment
+Each usable story is categorized by checking whether its title contains predefined keywords.
 
-Collects useful information such as score, comments, author, and
-collection time.
+### Categories
 
-Saves the collected data as a JSON file inside the data folder.
+| Category | Example Keywords |
+|---|---|
+| 💻 Technology | AI, software, tech, code, cloud, API, GPU, LLM |
+| 🌍 World News | war, government, president, election, climate, global |
+| 🏆 Sports | NFL, NBA, FIFA, sport, team, player, league |
+| 🔬 Science | research, study, space, physics, biology, NASA |
+| 🎬 Entertainment | movie, film, music, Netflix, book, show, streaming |
 
-Task 2 --- Data Processing
+The collected information includes:
 
-File: task2_data_processing.py
+- Post ID
+- Story title
+- Category
+- Score
+- Number of comments
+- Author
+- Collection timestamp
 
-Finds the latest collected JSON file.
+The raw data is saved as a dated JSON file inside `data/`.
 
-Loads the data using Pandas.
+---
 
-Removes duplicate posts.
+### 2️⃣ Task 2 — Data Processing
 
-Handles missing values.
+**File:** `task2_data_processing.py`
 
-Converts score and comment values into numeric data.
+The second stage prepares the collected data for analysis.
 
-Removes stories with very low scores.
+It:
 
-Cleans unnecessary spaces from titles and author names.
+- Finds the latest TrendPulse JSON file
+- Loads the data using Pandas
+- Removes duplicate posts
+- Removes rows with missing important fields
+- Converts score and comment values into numeric data
+- Removes stories with scores below the required threshold
+- Cleans unnecessary spaces from titles and author names
+- Saves the cleaned dataset
 
-Saves the cleaned dataset as data/trends_clean.csv.
+**Output:**
 
-Task 3 --- Data Analysis
+```text
+data/trends_clean.csv
+```
 
-File: task3_analysis.py
+---
 
-The analysis uses Pandas and NumPy to calculate:
+### 3️⃣ Task 3 — Data Analysis
 
-Average story score
+**File:** `task3_analysis.py`
 
-Average number of comments
+The third stage uses Pandas and NumPy to understand the cleaned dataset.
 
-Mean score
+The program calculates:
 
-Median score
+| Metric | Description |
+|---|---|
+| Average Score | Average score across collected stories |
+| Average Comments | Average number of comments |
+| Mean Score | Statistical mean of story scores |
+| Median Score | Middle score in the dataset |
+| Standard Deviation | Measures variation in story scores |
+| Maximum Score | Highest story score |
+| Minimum Score | Lowest story score |
+| Category Counts | Number of stories in each category |
+| Most Commented Story | Story with the highest comment count |
 
-Standard deviation
+The resulting dataset is saved as:
 
-Maximum score
-
-Minimum score
-
-Number of stories in each category
-
-Most-commented story
-
-The processed dataset is saved as:
-
+```text
 data/trends_analysed.csv
+```
 
-Task 4 --- Visualization
+---
 
-File: task4_visualization.py
+### 4️⃣ Task 4 — Data Visualization
 
-TrendPulse creates three visualizations:
+**File:** `task4_visualization.py`
 
-Top 10 Stories by Score
+The final stage converts the data into visual insights using Matplotlib.
 
-Stories per Category
+### 📈 Chart 1 — Top 10 Stories by Score
 
-Score vs Comments
+A horizontal bar chart showing the ten stories with the highest scores.
 
-The charts are saved inside the outputs folder.
+```text
+outputs/chart1_top_stories.png
+```
 
-📂 Project Structure
+### 📊 Chart 2 — Stories per Category
 
+A bar chart showing the number of stories collected in each category.
+
+```text
+outputs/chart2_categories.png
+```
+
+### 🔵 Chart 3 — Score vs Comments
+
+A scatter plot comparing story scores with the number of comments. Stories are separated into **Popular** and **Not Popular** groups using a score threshold.
+
+```text
+outputs/chart3_scatter.png
+```
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| 🐍 Python | Core programming language |
+| 🌐 Requests | Sending API requests |
+| 📦 JSON | Handling API data |
+| 🐼 Pandas | Data loading, cleaning, and processing |
+| 🔢 NumPy | Statistical calculations |
+| 📊 Matplotlib | Creating charts |
+| 📁 Glob | Finding matching data files |
+| 💻 OS | Managing folders and file paths |
+
+---
+
+## 📂 Project Structure
+
+```text
 TrendPulse/
 │
-├── data/
+├── 📁 data/
 │   ├── trends_20260828.json
 │   ├── trends_20260829.json
 │   ├── trends_clean.csv
 │   └── trends_analysed.csv
 │
-├── outputs/
+├── 📁 outputs/
 │   ├── chart1_top_stories.png
 │   ├── chart2_categories.png
 │   └── chart3_scatter.png
 │
-├── task1_data_collection.py
-├── task2_data_processing.py
-├── task3_analysis.py
-├── task4_visualization.py
-└── README.md
+├── 🐍 task1_data_collection.py
+├── 🐍 task2_data_processing.py
+├── 🐍 task3_analysis.py
+├── 🐍 task4_visualization.py
+└── 📄 README.md
+```
 
-💻 Technologies Used
+---
 
-Python --- Main programming language
+## ⚙️ Requirements
 
-Requests --- API requests and data collection
+Make sure **Python 3** is installed.
 
-JSON --- Handling API data
+Install the required Python packages:
 
-Pandas --- Data processing and analysis
-
-NumPy --- Statistical calculations
-
-Matplotlib --- Data visualization
-
-Glob / OS --- File and folder handling
-
-▶️ How to Run
-
-Make sure Python 3 is installed.
-
-Install the required libraries:
-
+```bash
 pip install requests pandas numpy matplotlib
+```
 
-Run the tasks in order:
+If your system uses `pip3`:
 
+```bash
+pip3 install requests pandas numpy matplotlib
+```
+
+---
+
+## ▶️ How to Run
+
+Run the four tasks in order because each stage uses the output from the previous stage.
+
+### Step 1 — Collect the data
+
+```bash
 python3 task1_data_collection.py
+```
+
+This creates a dated JSON file inside `data/`.
+
+### Step 2 — Clean the data
+
+```bash
 python3 task2_data_processing.py
+```
+
+This creates:
+
+```text
+data/trends_clean.csv
+```
+
+### Step 3 — Analyze the data
+
+```bash
 python3 task3_analysis.py
+```
+
+This creates:
+
+```text
+data/trends_analysed.csv
+```
+
+### Step 4 — Create visualizations
+
+```bash
 python3 task4_visualization.py
+```
 
-Each task uses the output generated by the previous task.
+This creates the three chart images inside `outputs/`.
 
-📈 Output
+---
 
-After running the complete pipeline, TrendPulse produces:
+## 🔄 Data Flow
 
-Raw story data in JSON format
+TrendPulse follows a clear sequence:
 
-Cleaned CSV data
+```text
+Raw Hacker News Stories
+          ↓
+     JSON Dataset
+          ↓
+   Remove Duplicates
+          ↓
+    Handle Missing Data
+          ↓
+     Clean CSV Dataset
+          ↓
+   Statistical Analysis
+          ↓
+    Analysed Dataset
+          ↓
+      Visualizations
+          ↓
+     Trend Insights
+```
 
-Analysed CSV data
+---
 
-Three visualization images
+## 📊 Example Analysis
 
-This makes the project easy to follow from raw API data to final
-visual insights.
+A completed run of the project can produce statistics such as:
 
-🎯 Key Idea
+```text
+Average score
+Average comments
+Mean score
+Median score
+Standard deviation
+Maximum score
+Minimum score
+Most represented category
+Most commented story
+```
 
-TrendPulse demonstrates a complete beginner-friendly data workflow using
-a real public API:
+The exact values can change because Hacker News trending data changes over time.
 
-Collect → Process → Analyze → Visualize
+---
 
-The goal is not just to collect trending stories, but to transform them
-into structured data and understandable insights.
+## 💡 Key Insight
 
-👨‍💻 Project
+TrendPulse demonstrates that data analysis is more than collecting information.
 
-TrendPulse --- Hacker News Trend Analysis
+The project takes data through the complete journey:
 
-Built with Python and open-source data tools.
+> **Collect it → clean it → understand it → visualize it.**
+
+This makes the final information easier to explore and understand than the original raw API response.
+
+---
+
+## 🚀 Future Improvements
+
+Possible extensions for TrendPulse include:
+
+- Adding more news sources
+- Improving category detection with NLP
+- Tracking trends across multiple days
+- Comparing category performance over time
+- Adding interactive dashboards
+- Storing historical datasets
+- Creating automated trend reports
+
+---
+
+## 📚 Data Source
+
+TrendPulse uses the public **Hacker News API** to retrieve story data.
+
+No API key or user login is required for the endpoints used by this project.
+
+---
+
+## 👨‍💻 Project Information
+
+**Project:** TrendPulse — What's Actually Trending Right Now
+
+**Language:** Python
+
+**Pipeline:** Data Collection → Data Processing → Data Analysis → Data Visualization
+
+---
+
+<div align="center">
+
+### ⭐ TrendPulse
+
+**Turning trending stories into meaningful insights.**
+
+*Built with Python, Pandas, NumPy, Matplotlib, and the Hacker News API.*
+
+</div>
