@@ -1,86 +1,93 @@
-import pandas as pd          # Used to read, clean and work with the story data
-import glob                 # Used to find all files matching a particular pattern
-import os                   # Used for working with files and folders
+import pandas as pd          # Used to load and clean the data
+import glob                  # Used to find the JSON file
+import os                    # Used for working with folders
 
 
-# Look inside the data folder and find all TrendPulse JSON files
+# Find the latest TrendPulse JSON file
 json_files = glob.glob("data/trends_*.json")
 
-# If there are no JSON files, stop the program and show an error
 if not json_files:
     raise FileNotFoundError(
         "No TrendPulse JSON file was found in the data folder."
     )
 
-# Sort the files by name and pick the latest one
+# Pick the latest JSON file
 input_file = sorted(json_files)[-1]
 
-# Read the selected JSON file and put the data into a DataFrame
+# Load the JSON data into a Pandas DataFrame
 df = pd.read_json(input_file)
 
 print(f"Loaded {len(df)} stories from {input_file}")
 
 
-# Remove duplicate stories using the post ID
+# Remove duplicate stories using their post ID
 df = df.drop_duplicates(subset="post_id")
 
 print(f"After removing duplicates: {len(df)}")
 
 
-# Remove stories where title, score or category is missing
-df = df.dropna(subset=["title", "score", "category"])
+# Remove rows if any important field is missing
+df = df.dropna(
+    subset=["post_id", "title", "score"]
+)
 
-print(f"After removing missing values: {len(df)}")
+print(f"After removing nulls: {len(df)}")
 
 
-# Convert the score column into numbers
+# Make sure score and number of comments are numeric
 df["score"] = pd.to_numeric(
     df["score"], errors="coerce"
 )
 
-# Convert the comments column into numbers
 df["num_comments"] = pd.to_numeric(
     df["num_comments"], errors="coerce"
 )
 
 
-# Remove rows where the number conversion failed
+# Remove rows where the numeric conversion failed
 df = df.dropna(
     subset=["score", "num_comments"]
 )
 
-# Change the numeric values into integers
+
+# Convert score and comments to integers
 df["score"] = df["score"].astype(int)
 df["num_comments"] = df["num_comments"].astype(int)
 
 
-# Keep only stories that have at least 2 upvotes
-df = df[df["score"] >= 2]
+# Remove stories with a score below 5
+df = df[df["score"] >= 5]
 
 print(f"After removing low scores: {len(df)}")
 
 
-# Remove extra spaces from the beginning and end of titles
+# Remove extra spaces from story titles
 df["title"] = df["title"].str.strip()
 
-# Remove extra spaces from author names
-# If an author is missing, use "unknown" instead
-df["author"] = df["author"].fillna("unknown").str.strip()
+
+# Clean author names and use "unknown" when the author is missing
+df["author"] = (
+    df["author"]
+    .fillna("unknown")
+    .str.strip()
+)
 
 
 # Save the cleaned data as a CSV file
 output_file = "data/trends_clean.csv"
 
-df.to_csv(output_file, index=False)
+df.to_csv(
+    output_file,
+    index=False
+)
 
 print(f"Saved {len(df)} rows to {output_file}")
 
 
-# Show how many stories we have in each category
+# Show how many stories are present in each category
 print("\nStories per category:")
 
 category_counts = df["category"].value_counts()
 
-# Print each category along with its story count
 for category, count in category_counts.items():
     print(f"{category:<15} {count}")
