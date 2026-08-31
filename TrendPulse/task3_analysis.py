@@ -1,17 +1,16 @@
-import pandas as pd          # Used to read and work with the CSV data
-import numpy as np           # Used for statistical calculations
+import pandas as pd          # Used to load and work with the CSV data
+import numpy as np           # Used for the required statistical calculations
 
 
-# This is the cleaned data created by Task 2
+# Load the cleaned data created by Task 2
 input_file = "data/trends_clean.csv"
 
-# Read the cleaned CSV file into a DataFrame
 df = pd.read_csv(input_file)
 
-print(f"Loaded data: ({len(df)}, {len(df.columns)})")
+print(f"Loaded data: {df.shape}")
 
 
-# Show the first 5 stories so we can quickly check the data
+# Show the first five rows to get a quick look at the data
 print("\nFirst 5 rows:")
 print(df.head())
 
@@ -24,26 +23,26 @@ print(f"\nAverage score: {average_score:,.2f}")
 print(f"Average comments: {average_comments:,.2f}")
 
 
-# Use NumPy to calculate some important statistics
+# Use NumPy to calculate the main statistics for story scores
 mean_score = np.mean(df["score"])
 median_score = np.median(df["score"])
 standard_deviation = np.std(df["score"])
 
-# Find the highest and lowest story scores
-maximum_score = df["score"].max()
-minimum_score = df["score"].min()
+maximum_score = np.max(df["score"])
+minimum_score = np.min(df["score"])
 
-print(f"\nMean score: {mean_score:,.2f}")
+print("\n--- NumPy Stats ---")
+print(f"Mean score: {mean_score:,.2f}")
 print(f"Median score: {median_score:,.2f}")
-print(f"Standard deviation: {standard_deviation:,.2f}")
-print(f"Maximum score: {maximum_score:,}")
-print(f"Minimum score: {minimum_score:,}")
+print(f"Std deviation: {standard_deviation:,.2f}")
+print(f"Max score: {maximum_score:,}")
+print(f"Min score: {minimum_score:,}")
 
 
-# Count how many stories are present in each category
+# Count the number of stories in each category
 category_counts = df["category"].value_counts()
 
-# Find the category that has the most stories
+# Pick the category with the highest number of stories
 top_category = category_counts.idxmax()
 top_category_count = category_counts.max()
 
@@ -53,7 +52,7 @@ print(
 )
 
 
-# Find the story that received the most comments
+# Find the story that has received the most comments
 most_commented = df.loc[
     df["num_comments"].idxmax()
 ]
@@ -65,9 +64,24 @@ print(
 )
 
 
-# Save the analysed data so Task 4 can use it for visualization
+# Calculate how much discussion a story gets compared with its score
+df["engagement"] = (
+    df["num_comments"] / (df["score"] + 1)
+)
+
+
+# Mark a story as popular when its score is above the average score
+df["is_popular"] = (
+    df["score"] > average_score
+)
+
+
+# Save the updated DataFrame for Task 4
 output_file = "data/trends_analysed.csv"
 
-df.to_csv(output_file, index=False)
+df.to_csv(
+    output_file,
+    index=False
+)
 
 print(f"\nSaved to {output_file}")
