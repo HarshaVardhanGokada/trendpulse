@@ -1,0 +1,96 @@
+post_id,title,category,score,num_comments,author,collected_at
+49479122,Autistici/Inventati's main .org domain goes dark after US terrorism designation,technology,91,25,subvol,2026-08-28 21:32:43
+49477212,OpenAI: Migrating to HTTPX2,technology,129,53,tosh,2026-08-28 21:32:45
+49478091,I Used AWS Cognito for a Startup. I Wouldn't Do It Again,technology,97,76,speckx,2026-08-28 21:32:46
+49475079,Luanti removed from Google Play due to baseless AI copyright notice,technology,229,71,miniBill,2026-08-28 21:32:47
+49479072,Verschlimmbesserung: The Word Your Software Updates Need,technology,6,0,speckx,2026-08-28 21:32:54
+49478103,EPA says power for data centers can sidestep pollution laws,technology,194,169,Levitating,2026-08-28 21:32:57
+49474786,Sovereign Tech Agency invests €500k in Flatpak,technology,237,127,eigenspace,2026-08-28 21:33:00
+49480449,Nvidia Insists It Can Keep Printing Money to Fund the AI Boom,technology,4,1,root-parent,2026-08-28 21:33:05
+49472820,Terminal-Bench-Science: Evaluating AI agents on scientific research workflows,technology,105,32,matt_d,2026-08-28 21:33:05
+49478170,KHMS – a file-based long-term memory an LLM agent installs into itself,technology,3,0,ksxcz,2026-08-28 21:33:07
+49477854,U.S. Sanctions Against the a/I Collective,technology,142,128,exiguus,2026-08-28 21:33:11
+49478165,We need to talk about migrations with AI,technology,13,2,_1,2026-08-28 21:33:21
+49468642,We found a division by zero bug in FFmpeg with a vibecoded fuzzer,technology,282,249,dclavijo,2026-08-28 21:33:24
+49464314,"MIT's Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training",technology,137,81,pbui,2026-08-28 21:33:24
+49473483,Stripe said to abandon $50B pursuit of PayPal,technology,178,239,1986,2026-08-28 21:33:25
+49458875,Humanity has the debate about AI consciousness backwards,technology,109,343,semiquaver,2026-08-28 21:33:31
+49466715,Launch HN: Salem Robotics (YC S26) – Software for industrial inspection robots,technology,46,30,Salem_robotics,2026-08-28 21:33:33
+49476802,LLM Cliché Highlighter,technology,7,1,rzk,2026-08-28 21:33:36
+49447057,The turbulent AI era is here,technology,340,597,nanna,2026-08-28 21:33:37
+49478383,The curious symmetry between quantum error correction and the brain,technology,5,0,dmonay,2026-08-28 21:33:42
+49458418,CEO fired developers to make room for AI. Developers create open source AI CEO,technology,994,685,GrumpySciGuy,2026-08-28 21:33:47
+49477766,Ask HN: Alternatives to Fail2ban?,technology,4,1,jech,2026-08-28 21:33:53
+49477249,Your AI Generated Menu Triggered My Trypophobia,technology,11,6,shubhamjain,2026-08-28 21:34:00
+49450898,It’s so hard to finish an idea that is not yours and is just suggested by AI,technology,254,181,zazuke,2026-08-28 21:34:02
+49451495,Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies,technology,53,23,AlexRisio,2026-08-28 21:34:06
+49475979,Interactive Warhammer 40k Galaxy Map – Cartographia Imperialis,worldnews,96,22,gbxyz,2026-08-28 21:34:16
+49479872,Army Awards $2.2B for 'Microreactors' On U.S. Bases,worldnews,5,0,lxm,2026-08-28 21:34:32
+49468834,Previewing the Model Hardware Standard,worldnews,130,57,surprisetalk,2026-08-28 21:34:42
+49475404,"Climate change is strengthening El Niño, coral records suggest",worldnews,109,109,shymaple,2026-08-28 21:34:52
+49478986,Sweetener used in chewing gum and jam linked to strokes and heart attacks,worldnews,5,0,samizdis,2026-08-28 21:34:55
+49477339,Forward-deployed engineer: a $247k to $552k salary jump,worldnews,7,2,igor_ryabenkiy,2026-08-28 21:35:21
+49432201,How credit card rewards became a $9.2B wealth transfer,worldnews,253,445,conbrian,2026-08-28 21:35:52
+49444232,Harvest (IBM 7950): Supercomputer for cryptanalysis at the NSA in the Cold War,worldnews,98,24,jnord,2026-08-28 21:36:06
+49472416,"Australia is the safest place during a global catastrophe, study suggests",worldnews,25,15,thedreammachine,2026-08-28 21:36:45
+49470237,"Unmasking TeamPCP, King of Software Supply Chain Attacks",worldnews,5,0,882542F3884314B,2026-08-28 21:36:50
+49473279,Are Vandals Winning the War on Flock Cameras? [video],worldnews,18,1,Cider9986,2026-08-28 21:36:55
+49469753,Fewer Americans Pay to Use LLMs Than Still Pay to Play World of Warcraft,worldnews,27,15,SLHamlet,2026-08-28 21:36:55
+49467636,Dwarf Fortress is getting the mother of all magic updates,worldnews,42,3,Tomte,2026-08-28 21:36:56
+49425800,Vintage Artificial Intelligence: Before It Got Awkward,worldnews,161,31,signor_bosco,2026-08-28 21:37:22
+49474617,West Point Professor Fired for Refusing to Lie About Climate Change,worldnews,22,3,petethomas,2026-08-28 21:37:24
+49454366,Six government passport CAs that Python rejects and OpenSSL accepts,worldnews,18,6,Eginn-33,2026-08-28 21:37:32
+49422227,Characterizing Agentic Flooding of Government Services,worldnews,81,87,lensecat,2026-08-28 21:37:49
+49435781,Warnock: Harnessing GPU geometry amplification for vector graphics,worldnews,45,4,coffeeaddict1,2026-08-28 21:37:51
+49472522,Three UK airports hit by cyber-attack with data of 8.7M customers accessed,worldnews,11,1,tchalla,2026-08-28 21:38:01
+49464391,"US Government designates host of noblogs.org a ""global terrorist""",worldnews,235,130,robtherobber,2026-08-28 21:38:06
+49472609,"AI Finds Critical Flaw in Bitcoin Lightning, Devs Issue Emergency Warning",worldnews,9,1,Jimmc414,2026-08-28 21:38:24
+49461965,My software development workflow is AI now & it feels exhausting and soulless,worldnews,31,17,bundie,2026-08-28 21:38:25
+49465381,Software engineering is about managing complexity,worldnews,117,82,justorius,2026-08-28 21:38:31
+49435495,"Otto Dix, Nietzsche, and the Great War (2019)",worldnews,42,28,samizdis,2026-08-28 21:38:42
+49448173,"Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",worldnews,12,0,_ache_,2026-08-28 21:38:49
+49477217,"Show HN: Texttile, a multiplayer blog engine for people who write together",sports,10,2,klausbreyer,2026-08-28 21:39:17
+49477732,Authorities arrest 2 alleged members of prolific hacking group TeamPCP,sports,7,0,furcyd,2026-08-28 21:39:44
+49477504,Ask HN: Any blogs/personal notes from game devs who self-published a game?,sports,5,0,ssenssei,2026-08-28 21:39:51
+49466006,Decompiling a Nintendo 64 game in 84 days,sports,264,171,knackers,2026-08-28 21:39:54
+49445252,Disrupting a new covert influence campaign from Russia,sports,96,66,sam_lowry_,2026-08-28 21:41:16
+49463464,Two Alleged 'TeamPCP' Hackers Arrested in Australia,sports,20,2,hacb,2026-08-28 22:06:51
+49422784,The entire city of San Francisco as a video game,sports,607,171,centrosphere,2026-08-28 22:42:25
+49469249,Nvidia Starts Pac as AI Chip Maker Builds DC Influence Force,sports,91,40,rarisma,2026-08-28 23:41:58
+49455695,Show HN: Every push-up becomes an attack in a camera-counted RPG game,sports,21,7,not_wowinter13,2026-08-29 00:23:00
+49467748,The Israeli Influence Machine [video],sports,10,0,untitledsource,2026-08-29 00:23:47
+49450662,"Show HN: Highball – Run Windows games on Apple Silicon, with an open game db",sports,5,0,gauthierpiarret,2026-08-29 00:24:01
+49477925,Interactive pattern discovery in binaries (FF-16-TUI),science,25,2,HexLasso,2026-08-29 00:41:07
+49477561,"Canada recruits foreign scientists, researchers poaching many from U.S.",science,12,1,BiraIgnacio,2026-08-29 04:35:45
+49466989,Why HPSC Is a Big Deal for Space Exploration,science,27,8,mooreds,2026-08-29 09:54:24
+49420530,Peppermint oil reduces blood pressure by 8.48 mmHg in small study,science,230,108,brandonb,2026-08-29 13:00:55
+49463545,A New NASA Design Turbocharges Nuclear Spacecraft,science,4,0,sohkamyung,2026-08-29 13:51:31
+49453656,"In Hilbert Space, All Things Are Quantumly Possible",science,10,1,ibobev,2026-08-29 13:56:06
+49450500,Show HN: TexLite – A lightweight self-hosted LaTeX workspace,science,21,2,thisispi,2026-08-29 14:28:44
+49448556,"Rotating needles in space: the road to the Kakeya conjecture, and why it matters",science,10,1,speckx,2026-08-29 14:53:04
+49466597,Ask HN: Should I leave web development to study medicine in my mid-30s?,science,7,13,lovepuzzles,2026-08-29 14:53:29
+49471965,"Show HN: OpenTIE and OpenXWA, Modern Ports of Tie Fighter and X-Wing Alliance",entertainment,218,56,elyosh,2026-08-29 14:54:14
+49461817,Show HN: The load-bearing vocabulary of Claude,entertainment,662,319,Labo333,2026-08-29 14:54:19
+49466704,"Show HN: Watches user sessions, finds bugs that matter, and fixes them",entertainment,35,11,aray07,2026-08-29 14:54:25
+49471407,Show HN: We built open OpenRouter that turns usage into a better model,entertainment,209,46,SilenN,2026-08-29 14:54:28
+49475159,"Show HN: FnScribe – Open-source, offline dictation for macOS",entertainment,20,14,modagent,2026-08-29 14:54:30
+49476894,Show HN: SubSmith – Turn your own videos into language-learning material,entertainment,67,51,IbrahimF96,2026-08-29 14:54:31
+49468816,Show HN: Voronoi Go,entertainment,154,26,igpay,2026-08-29 14:54:44
+49450816,"Show HN: A lightweight, stateless database for agent memory",entertainment,34,12,anuptalwalkar,2026-08-29 14:54:47
+49467551,"Show HN: My Claude quota ran out in 10 minutes, so I made a tool to find out why",entertainment,86,64,sachinneravath,2026-08-29 14:54:49
+49479483,Survey shows Americans have turned against license plate tracking cameras,entertainment,12,0,Tasseographer,2026-08-29 14:54:57
+49465291,Show HN: Restoredrill – proves your Postgres backups restore,entertainment,46,22,ahmadpiran,2026-08-29 14:55:07
+49473333,Show HN: Pi-Black – Use Your Claude Max (Or Pro) Subscription with Pi,entertainment,8,3,paoloanzn,2026-08-29 14:55:11
+49464459,Show HN: RealDiff – runtime behavior diffing for pull requests (six languages),entertainment,40,10,issacnitin,2026-08-29 14:55:14
+49473767,Show HN: IndexFlow – Open-source indexing infrastructure built with Rust,entertainment,22,6,mandarinclips,2026-08-29 14:55:18
+49467344,Writing for Developers Book,entertainment,24,0,cyndunlop,2026-08-29 14:55:24
+49477088,The AI-Native SDLC Playbook,entertainment,4,0,7777777phil,2026-08-29 14:55:34
+49468507,Show HN: Yet another minimal and lightweight terminal multiplexer written in Go.,entertainment,34,16,patriceckhart,2026-08-29 14:55:51
+49445286,Show HN: Buslens – where can I get to by bus? (UK),entertainment,81,55,RobinL,2026-08-29 14:56:00
+49437049,Show HN: LatticeDB – Like SQLite but for graph databases,entertainment,185,53,smiths1999,2026-08-29 14:56:11
+49465821,"Show HN: Proval – Self-hosted code review agent for GitLab, Forgejo, and GitHub",entertainment,12,1,dowonseo,2026-08-29 14:56:14
+49455557,Show HN: We built the smallest dual-band aircraft tracker,entertainment,37,8,CoolNamesAllTkn,2026-08-29 14:56:17
+49441375,"Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",entertainment,118,27,swimmingbrain,2026-08-29 14:56:53
+49419351,"Show HN: A techno machine in one HTML file, with verifiable renders",entertainment,238,48,ssx360,2026-08-29 14:56:58
+49468354,Show HN: A private radio station for issue updates across your org,entertainment,5,0,private4e584d,2026-08-29 14:56:59
+49421806,"Show HN: PicoMQ – Durable Streams over HTTP, on object storage",entertainment,159,31,adesh_nalpet,2026-08-29 14:57:16
